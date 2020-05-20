@@ -1,13 +1,20 @@
+import java.util.ArrayList;
 
 public class Main {
-
+	
+	ArrayList<Integer> numbers = new ArrayList<>();
+	
 	public Main() {
-		// TODO Auto-generated constructor stub
+		for (int i = 0; i < 2000; ++i) {
+			numbers.add(i);
+		}
+		
+		Search searchObj = new Search(numbers, 20); 
+		int itemFound = searchObj.getReturnVal();
+		System.out.println(itemFound);
 	}
-
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		// Test
+		new Main();
 	}
-
 }
