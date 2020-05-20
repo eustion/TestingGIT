@@ -9,7 +9,7 @@ public class Main {
 			numbers.add(i);
 		}
 		
-		Search searchObj = new Search(numbers, 20); 
+		Search searchObj = new Search(numbers, -2); 
 		int itemFound = searchObj.getReturnVal();
 		System.out.println(itemFound);
 	}

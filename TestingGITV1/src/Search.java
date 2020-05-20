@@ -23,6 +23,10 @@ public class Search extends Thread {
 		thread1.start();
 		thread2.start();
 		
+		//Cek jalan gak threadnya
+//		System.out.println("Thread " + thread1.isAlive());
+//		System.out.println("Thread " + thread2.isAlive());
+		
 		try {
 			thread1.join();
 			thread2.join();
@@ -33,12 +37,11 @@ public class Search extends Thread {
 
 		//Jika tidak ketemu
 		if (thread1.getFoundItem() == -1 && thread2.getFoundItem() == -1) {
-			returnVal = -1;
+			returnVal = -1111;
 		}
 		else {
 			returnVal = (thread1.getFoundItem() != -1) ? thread1.getFoundItem() : thread2.getFoundItem(); 
 		}
-		
 	}
 	
 	public int getReturnVal() {
